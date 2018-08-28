@@ -5,6 +5,8 @@ echo "开始配置opengl环境\n"
 #调试命令=gcc hw_opengl.cpp -o hw_opengl -lGL -lGLU -lglut
 sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
+sudo apt-get install python-dev python3-dev
+
 echo "opengl 环境配置成功\n"
 
 

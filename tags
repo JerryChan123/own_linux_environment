@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ackPath	ycm_configuration.sh	/^ackPath=$f\/ack$/;"	v	language:C++
+f	ycm_configuration.sh	/^f="$HOME\/.tags"$/;"	v	language:C++
+fileName	ycm_configuration.sh	/^    fileName=${hello##*\/}$/;"	v	language:C++
+gf	.vimrc	/^" YCM相关快捷键，分别是\\gl, \\gf, \\gg,一般直接使用;gg就可以了                                                    $/;"	v	language:C++
+gg	.vimrc	/^" YCM相关快捷键，分别是\\gl, \\gf, \\gg,一般直接使用;gg就可以了                                                    $/;"	v	language:C++
+hello	ycm_configuration.sh	/^hello=$LOCATION$/;"	v	language:C++
+indexerPath	ycm_configuration.sh	/^indexerPath="$HOME\/.indexer_files"$/;"	v	language:C++
+mapleader	.vimrc	/^let mapleader=";"$/;"	v	language:C++
+tagbar_compact	.vimrc	/^let g:tagbar_compact=1$/;"	v	language:C++
