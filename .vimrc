@@ -1,7 +1,5 @@
 "定义快捷键的前缀，即<Leader>
 "
-"" 启用vundle来管理vim插件
-set rtp+=~/.vim/bundle/Vundle.vim
 let mapleader=";"
 " 依次遍历子窗口
 nnoremap nw <C-W><C-W>

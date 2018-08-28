@@ -4,6 +4,10 @@ import platform
 import os
 import subprocess
 import ycm_core
+from os.path import expanduser
+
+#获取根目录即/homelinchen
+HOME_PATH = expanduser("~")＋“/”
 
 DIR_OF_THIS_SCRIPT = os.path.abspath( os.path.dirname( __file__ ) )
 DIR_OF_THIRD_PARTY = os.path.join( DIR_OF_THIS_SCRIPT, 'third_party' )
@@ -13,7 +17,7 @@ SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ]
 # compilation database set (by default, one is not set).
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
 flags = [
-'-std=c++11', 
+'-std=c++11',
 '-Wall',
 '-Wextra',
 '-Werror',
@@ -32,33 +36,33 @@ flags = [
 '-x',
 'c++',
 '-isystem',
-'/usr/include/7.3.0',
+'/usr/include',
 '-isystem',
 '/usr/local/include',
 '-isystem',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/pybind11',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/pybind11',
 '-isystem',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/BoostParts',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/BoostParts',
 '-isystem',
 get_python_inc(),
 '-isystem',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/include',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/include',
 '-isystem',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/tools/clang/include',
+HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/tools/clang/include',
 '-I',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm',
+HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm',
 '-I',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/ClangCompleter',
+HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/ClangCompleter',
 '-isystem',
 'cpp/ycm/tests/gmock/gtest',
 '-isystem',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/gtest/include',
+HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/gtest/include',
 '-isystem',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock',
+HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock',
 '-isystem',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/include',
+HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/include',
 '-isystem',
-'/home/linchen/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/benchmarks/benchmark/include',
+HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/benchmarks/benchmark/include',
 '-I',
 '.'
 ]
@@ -170,7 +174,3 @@ def FlagsForFile( filename, **kwargs ):
     'flags': final_flags,
     'do_cache': True
   }
-
-
-
-
