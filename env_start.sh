@@ -8,8 +8,8 @@ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 sudo apt-get install python-dev python3-dev
 
 echo "opengl 环境配置成功\n"
-
-
+#编译ycm需要
+sudo apt-get install mono-xbuild
 echo "-------------------------------\n"
 
 
