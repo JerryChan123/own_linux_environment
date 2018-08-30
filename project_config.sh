@@ -32,6 +32,7 @@ fi
 
 hello=$LOCATION
 
+cp .ycm_extra_conf.py  $LOCATION
 tempTxt=$HOME/temp.txt
 
 if [ -e  $tempTxt    ]; then
@@ -55,7 +56,6 @@ if [ ! -e $ctagsPath  ]; then
 
 fi
 
-cp .ycm_extra_conf.py  $LOCATION
 
 
 ##生成项目的tag

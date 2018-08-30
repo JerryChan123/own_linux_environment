@@ -1,4 +1,4 @@
-
+# coding=UTF-8
 from distutils.sysconfig import get_python_inc
 import platform
 import os
