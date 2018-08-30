@@ -7,7 +7,7 @@ import ycm_core
 from os.path import expanduser
 
 #获取根目录即/homelinchen
-HOME_PATH = expanduser("~")＋“/”
+HOME_PATH = os.environ['HOME']
 
 DIR_OF_THIS_SCRIPT = os.path.abspath( os.path.dirname( __file__ ) )
 DIR_OF_THIRD_PARTY = os.path.join( DIR_OF_THIS_SCRIPT, 'third_party' )
@@ -48,21 +48,21 @@ get_python_inc(),
 '-isystem',
 HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/include',
 '-isystem',
-HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/tools/clang/include',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/tools/clang/include',
 '-I',
-HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm',
 '-I',
-HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/ClangCompleter',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/ClangCompleter',
 '-isystem',
 'cpp/ycm/tests/gmock/gtest',
 '-isystem',
-HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/gtest/include',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/gtest/include',
 '-isystem',
-HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock',
 '-isystem',
-HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/include',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/include',
 '-isystem',
-HOME_PATH＋'.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/benchmarks/benchmark/include',
+HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/benchmarks/benchmark/include',
 '-I',
 '.'
 ]
