@@ -32,7 +32,7 @@ fi
 
 hello=$LOCATION
 
-cp .ycm_extra_conf.py  $LOCATION
+#cp .ycm_extra_conf.py  $LOCATION   注释调不使用，使用默认的就可以了
 tempTxt=$HOME/temp.txt
 
 if [ -e  $tempTxt    ]; then

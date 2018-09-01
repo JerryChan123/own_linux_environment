@@ -35,7 +35,10 @@ git submodule update --init --recursive
 
 cd $HOME/.vim/bundle/YouCompleteMe
 
+#建立软连接
+ln .ycm_extra_conf.py $HOME 
 
+ln .vimrc $HOME
 
 ./install.py --all
 

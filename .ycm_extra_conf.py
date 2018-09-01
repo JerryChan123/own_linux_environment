@@ -36,7 +36,7 @@ flags = [
 '-x',
 'c++',
 'isystem',
-'/usr/include/c++/7.3.0' #这个一定要在 /usr/include前面
+'/usr/include/c++/7.3.0'
 '-isystem',
 '/usr/include',
 '-isystem',
