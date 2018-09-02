@@ -13,6 +13,8 @@ noremap <Leader>jw <C-W>h
 noremap <Leader>iw <C-W>k
 "" 跳转至下方的子窗口
 noremap <Leader>kw <C-W>j
+"vim设置默认剪贴板
+set clipboard=unnamedplus
 
 "MinBufExplorer
 map <F3> :MBEToggle<cr>

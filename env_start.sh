@@ -1,5 +1,10 @@
 #/bin/bash
 
+echo "开始安装vim及其插件\n"
+
+sudo apt-get install vim vim-gtk vim-gnome
+
+
 echo "开始配置opengl环境\n"
 #安装opengl
 #调试命令=gcc hw_opengl.cpp -o hw_opengl -lGL -lGLU -lglut
@@ -7,6 +12,7 @@ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 #安装ycm的py支持
 sudo apt-get install python-dev python3-dev
 
+sudo apt-get install vim-gnome
 echo "opengl 环境配置成功\n"
 #编译ycm需要
 sudo apt-get install mono-xbuild
