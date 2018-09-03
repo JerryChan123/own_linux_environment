@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #以下路径都需要输入绝对路径，可以通过pwd进行查询，
 #不能输入~/linchen类似的路径
 
@@ -14,8 +15,17 @@ echo "输入项目的地址，注意最后一个字符不能为/："
 read LOCATION 
 
 #ex：/usr/include/cpp/7.3.0
-echo "输入/usr/include中的C++地址："
-read CPP 
+
+defaultCppDir="/usr/include/c++/7.3.0"
+
+
+if [ ! -d $defaultCppDir  ]; then
+    echo "输入/usr/include中的C++地址："
+    read temp
+    defaultCppDir=$temp 
+fi
+
+CPP=$defaultCppDir
 
 #如果没初始化indexer.files，则初始化该目录
 
@@ -32,7 +42,7 @@ fi
 
 hello=$LOCATION
 
-#cp .ycm_extra_conf.py  $LOCATION   注释调不使用，使用默认的就可以了
+cp .ycm_extra_conf.py  $LOCATION   
 tempTxt=$HOME/temp.txt
 
 if [ -e  $tempTxt    ]; then
@@ -52,6 +62,7 @@ fi
 
 ctagsPath="/usr/bin/ctags"
 if [ ! -e $ctagsPath  ]; then
+    echo "开始安装ctags\n"
     sudo apt-get install ctags
 
 fi
@@ -59,6 +70,9 @@ fi
 
 
 ##生成项目的tag
+
+
+echo "配置tag文件的路径为：$LOCATION"
 
 cd $LOCATION
 
@@ -68,6 +82,9 @@ echo "项目tags文件配置完成"
 
 
 #安装ack到电脑上
+
+
+echo "配置ack开始\n"
 
 f="$HOME/bin"
 if [ ! -d $f ]; then
@@ -81,6 +98,7 @@ if [ ! -e $ackPath ]; then
 fi
 
 
+echo "开始生成tags\n"
 
 #生成系统c++的tag
 
