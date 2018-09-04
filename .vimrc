@@ -1,5 +1,9 @@
+" 关闭兼容模式
+set nocompatible
 "定义快捷键的前缀，即<Leader>
-"
+
+set backspace=indent,eol,start
+
 let mapleader=";"
 " 依次遍历子窗口
 nnoremap nw <C-W><C-W>
@@ -226,8 +230,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set incsearch
 " 搜索时大小写不敏感
 set ignorecase
-" 关闭兼容模式
-set nocompatible
 " vim 自身命令行模式智能补全
 set wildmenu
 
@@ -338,6 +340,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
+Plugin 'mbbill/echofunc'
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on

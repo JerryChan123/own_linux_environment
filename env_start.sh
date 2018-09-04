@@ -1,8 +1,23 @@
 #/bin/bash
 
 echo "开始安装vim及其插件\n"
+#移除本身自带vim,编译新的vim
 
-sudo apt-get install vim vim-gtk vim-gnome
+sudo apt-get remove vim vim-runtime vim-tiny vim-common
+
+sudo apt-get install libncurses5-dev python-dev python3-dev libgtk3.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev
+
+
+cd $HOME
+git clone https://github.com/vim/vim.git
+
+cd vim
+
+sudo ./configure --with-features=huge --enable-multibyte --enable-rubyinterp --enable-pythoninterp --enable-python3interp --enable-luainterp --enable-cscope --enable-gui=gtk3 --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --with-python3-config-dir=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/ --prefix=/usr/local/vim
+
+sudo make
+
+sudo make install
 
 
 echo "开始配置opengl环境\n"
@@ -12,7 +27,14 @@ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 #安装ycm的py支持
 sudo apt-get install python-dev python3-dev
 
-sudo apt-get install vim-gnome
+echo "增加gonme桌面支持\n"
+sudo apt-get install gnome-tweak-tool
+sudo add-apt-repository ppa:daniruiz/flat-remix
+sudo apt-get update
+sudo apt-get install flat-remix-gnome
+sudo apt-get install flat-remix
+
+
 echo "opengl 环境配置成功\n"
 #编译ycm需要
 sudo apt-get install mono-xbuild
