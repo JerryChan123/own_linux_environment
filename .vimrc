@@ -249,7 +249,7 @@ set hlsearch
 let g:Powerline_colorscheme='solarized256'
 
 " 设置 gvim 显示字体
-set guifont=YaHei\ Consolas\ Hybrid\ 11
+set guifont=YaHei\ Consolas\ Hybrid\ 12
 
 " 禁止折行
 set nowrap
@@ -404,7 +404,7 @@ func SetTitle()
 		call SetComment_sh()
 
 	elseif &filetype == 'sh'
-		call setline(1,"#!/system/bin/sh")
+		call setline(1,"#!/bin/sh")
 		call setline(2,"")
 		call SetComment_sh()
 
@@ -428,7 +428,7 @@ func SetTitle()
 	     elseif &filetype == 'c'
 	  	call append(line(".")+10,"#include \"".expand("%:t:r").".h\"")
 	     elseif &filetype == 'cpp'
-	  	call append(line(".")+10, "#include \"".expand("%:t:r").".h\"")
+		  "call append(line(".")+10, "#include \"".expand("%:t:r").".h\"")
 	     endif
 	endif
 endfunc
