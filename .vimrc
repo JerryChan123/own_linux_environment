@@ -1,7 +1,6 @@
 " 关闭兼容模式
 set nocompatible
 "定义快捷键的前缀，即<Leader>
-
 set backspace=indent,eol,start
 
 let mapleader=";"
@@ -307,9 +306,17 @@ let g:ctrlsf_default_view_mode = 'normal'
 let g:ctrlsf_position = 'bottom'
 let g:ctrlsf_winsize = '25%'
 
+"自动格式化代码
+"F3自动格式化代码
+noremap <F4> :Autoformat<CR>
+let g:autoformat_verbosemode=1
+
+
+
 " vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tomasr/molokai'
