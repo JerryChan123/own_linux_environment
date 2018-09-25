@@ -65,6 +65,8 @@ HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock',
 HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/tests/gmock/include',
 '-isystem',
 HOME_PATH+'/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/benchmarks/benchmark/include',
+'-isystem,',
+'/usr/include/GL',
 '-I',
 '.'
 ]
