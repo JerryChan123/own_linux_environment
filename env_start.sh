@@ -20,6 +20,8 @@ echo "-------------------------------\n"
 
 echo"开始配置vim文件\n"
 
+sudo apt-get install ctags
+
 if [ !  -d $HOME/.vim/bundle  ]; then
   sudo  rm rf ~/.vim/bundle
 fi
